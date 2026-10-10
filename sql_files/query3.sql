@@ -1,7 +1,7 @@
 -- Query 3
 -- Print a list of all prescriptions that a particular doctor has prescribed
 
-SELECT * FROM prescriptions WHERE doctor_id = 12;
+-- SELECT * FROM prescriptions WHERE doctor_id = 12;
 
 -- different version based on doctor's name (person_id = 12 : 'Dr. Corey Garcia')
 
