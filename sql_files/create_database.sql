@@ -15,7 +15,7 @@ CREATE TABLE hospitals(
 );
 
 -- create doctors_and_patients table
--- add constraints to define key references
+-- constraints added for extra clarity, as self referencing keys
 CREATE TABLE doctors_and_patients(
 	person_id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
 	name VARCHAR(255) NOT NULL,
