@@ -1,6 +1,6 @@
 # HPDM206Z Assignment 1 - Developing a hospital database
 
-This project is designed to model relationships between hospitals, doctors, patients and prescriptions. Included are SQL scripts to create the database schema, load in data from `.csv` files and run queries that mimic useful questions for these relationships.
+This project is designed to model relationships between hospitals, doctors, patients and prescriptions. Included are SQL scripts to create the database schema, load in data from `.csv` files and run queries that mimic useful questions for these relationships. Several of the queries were made more complex than necessary with joins and aliases.
 ### Repository structure
 ---
 [/data](/data) : contains the `.csv` files given in order to populate a database
