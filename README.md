@@ -29,4 +29,4 @@ This project is designed to model relationships between hospitals, doctors, pati
 > Both `.txt` and `.sql` versions are provided<br>
 > **Please note** query3 and query6 have two variations of query: a simpler and a more complex using a join. The simpler is commented out in both locations for clarity
 
-The database exported by use of `mysqldump` command can be found in [hospital_database.sql](hospital_database.sql)
+The database exported by use of `mysqldump` command can be found in [hospital_database_dump.sql](hospital_database_dump.sql)
