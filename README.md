@@ -25,7 +25,8 @@ This project is designed to model relationships between hospitals, doctors, pati
 >   - `DESCRIBE [...];` *(on all 3 tables)*
 >   - `SELECT COUNT(*) FROM [...];` *(on all 3 tables, to check all records have been input into the table successfully)*
 
-[/query](/query) and [/sql_files](/sql_files) for the six queries outlined in the assignment:
+[/query](/query) and [/sql_files](/sql_files) for the six queries outlined in the assignment:<br>
+> **I have been executing the** `.sql` **files by using:** `mysql> source sql_files/query[..].sql`<br>
 > Both `.txt` and `.sql` versions are provided<br>
 > **Please note** query3 and query6 have two variations of query: a simpler and a more complex using a join. The simpler is commented out in both locations for clarity
 
