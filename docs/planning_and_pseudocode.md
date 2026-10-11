@@ -5,7 +5,7 @@
 |---|---|---|
 |Hospitals &rarr; Doctors|One-to-Many|One hospital has many doctors, each doctor belongs to one hospital|
 |Doctors &rarr; Patients|One-to-Many|One doctor has many patients, each patient has one assigned doctor|
-|Patients &rarr; Prescriptions|One-To-Many|One patient can be given many prescriptions|
+|Patients &rarr; Prescriptions|One-To-Many|One patient can be given many prescriptions, in theory each prescription should be unique|
 |Doctors &rarr; Prescriptions|One-To-Many|One doctor can issue many prescriptions|
 
 >It's worth noting that 'Doctors &rarr; Patients' is a self-referencing relationship with the doctor's ID as a foreign key
@@ -42,20 +42,27 @@
 
 
 
-## Queries
+## Query tasks
 
 #### 1. Print a list of all doctors based at a particular hospital
-
+> Select all records from `doctors_and_patients` where role is doctor and the hospital id matches the selected hospital<br>
+> Could join in order to get the name of doctors instead of just an id. Join with `hospitals`.
 #### 2. Print a list of all prescriptions for a particular patient, ordered by the prescription date.
-
+> Select all records from `prescriptions` with a specific patient id then use `ORDER BY prescription_date`
 #### 3. Print a list of all prescriptions that a particular doctor has prescribed
-
+> Select all records with a specific doctor id
+> Or... join `prescriptions` with `doctors_and_patients` in order to search based on doctors name, not just their id 
 #### 4. Add a new patient to the database, including being registered with one of the doctors
-
+> `INSERT INTO` should be plenty, then specify values
+> Assuming `AUTO_INCREMENT` and `NULL // NOT NULL` used corretnly, `person_id` and `hospital_id` don't need to be entered
+> Test with selecting all where name equals the one just inserted
 #### 5. Identify which doctor has made the most prescriptions
-
+> Show records by doctors name (feels like a better convention)<br>
+> Join `prescriptions` and `doctors_and_patients`<br>
+> `ORDER BY [...] DESC`
 #### 6. Print a list of all doctors at the hospital with the biggest size (number of beds)
-
+> Embedded query?<br>
+> Select all doctors from `doctors_and_patients` (role='Doctor') `AND` take the top 'size' hospital using `ORDER BY [...] DESC` again and `LIMIT 1`
 > Queries should be as plaintext or bash script
 ---
 
